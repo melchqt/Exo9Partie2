@@ -1,28 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title></title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Hello</title>
+</head>
+<body>
 
-    <form action="/ma-page-de-traitement" method="post">
-        <div class="color">
-            <label for="name">1.Nom :</label>
-            <input type="text"id="name" name="user_name"/>
-        </div>
-        <div class="color">
-            <label for="prenom">2.Prénom :</label>
-            <input type="prenom"id="mail" name="prenom"</input>
-        </div>
-        <div class="color">
-            <label for="adresse mail">3.Adresse mail :</label>
-            <input id="adresse mail" name="user_mail"</input>
-        </div>
-        <div class="bolognaise">
-          <label for="adresse de livraison">4.Adresse de livraison:</label>
-        </div>  
-    </form>
-  </body>
-</html>
+  <form action="/ma-page-de-traitement" method="post">
+    <fieldset id="identifyInfo">
+      <legend id="identifyInfo">Votre identité</legend>
+      <ol>
+        <li>
+          <label for="name">1. Nom :</label>
+          <input type="text" placeholder="nom" name="user_name">
+        </li>
+        <li>
+          <label for="prenom">2. Prénom :</label>
+          <input type="firstname" placeholder="prénom" name="firstname">
+        </li>
+        <li>
+          <label for="mail">3. Adresse mail :</label>
+          <input type="mail" placeholder="adresse mail" name="user_mail">
+        </li>
+      </ol>
+    </fieldset>
+    <fieldset id="adressinfo">
+      <legend id="adressinfo">Votre adresse de livraison</legend>
+      <ol>
+        <li>
+          <label for="adress">1. Adresse :</label>
+          <textarea type="Adress" name="adress"></textarea>
+        </li>
+        <li>
+          <label for="postalcode">2. Code postale:</label>
+          <input type="postalcode" placeholder="code postale" name="postalcode">
+        </li>
+        <li>
+          <label for="city">3. Ville:</label>
+          <input type="city" placeholder="ville" name="city">
+        </li>
+      </ol>
+    </fieldset>
+    <fieldset id="info">
+      <legend id="info">Informations de règlement</legend>
+      <ol>
+        <li> 1. Type de carte bancaire :
+          <ul>
+            <li>
+              <input type="radio" name="coche" value="-15">
+              <label for="VISA">VISA</label>
+            </li>
+            <li>
+              <input type="radio" name="coche" value="-15">
+              <label for="MASTERCARD">MASTERCARD</label>
+            </li>
+          </ul>
+
+          <li>
+            <label for="cardnumber">2. Numéro de carte : </label>
+            <input type="cardnumber" placeholder="numéro de carte" id="cardnumber">
+          </li>
+          <li>
+            <label for="securitycode">3. Code de sécurité : </label>
+            <input type="securitycode" placeholder="code de sécurité"id="securitycode">
+          </li>
+          <li>
+            <label for="holder'sname">4. Nom du titulaire :</label>
+            <input type="text" placeholder="nom du titulaire" id="holder'sname">
+          </li>
+        </fieldset>
+      </form>
+      <div id="button">
+        <button type="submit">J'achète !</button>
+      </body>
+      </html>
